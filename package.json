@@ -1,0 +1,45 @@
+{
+  "name": "json-document-store",
+  "version": "0.0.3",
+  "description": "A simplistic json document data store.",
+  "main": "lib/index.js",
+  "scripts": {
+    "mocha": "node node_modules/.bin/mocha --reporter spec --check-leaks lib/**/*.js",
+    "test": "node node_modules/.bin/nyc --reporter=html --exclude='**/*.spec.js' npm run mocha",
+    "test-watch": "node node_modules/.bin/nyc --reporter=html --exclude='**/*.spec.js' npm run mocha -- -w"
+  },
+  "bugs": {
+    "url": "https://github.com/jasoncot/json-document-store/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasoncot/json-document-store.git"
+  },
+  "keywords": [
+    "json",
+    "document",
+    "datastore",
+    "db"
+  ],
+  "author": "Jason Cotton",
+  "license": "SEE LICENSE IN LICENSE",
+  "publishConfig": {
+    "registry": "https://trailoff.net/npm/"
+  },
+  "private": true,
+  "dependencies": {
+    "events": "^1.1.1",
+    "maybe": "0.0.2",
+    "ramda": "^0.23.0",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "eslint": "^4.3.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "expect.js": "^0.3.1",
+    "gulp": "^3.9.1",
+    "mocha": "^3.5.0",
+    "nyc": "^11.1.0"
+  }
+}
